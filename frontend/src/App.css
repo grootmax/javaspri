@@ -1,0 +1,326 @@
+/* Remove default Vite styles if they are no longer needed */
+/* Keep .container if defined in index.css, or define here */
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Pushes brand to left, links to right */
+  align-items: center;
+  background-color: #333; /* Dark background */
+  padding: 0.8rem 1.5rem; /* Vertical and horizontal padding */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar-brand .navbar-link {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.75rem; /* Spacing between links */
+  padding: 0.3rem 0; /* Add some padding for hover effect */
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #ddd; /* Lighter color on hover */
+  text-decoration: none; /* Keep no underline */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-welcome {
+  margin-right: 1rem; /* Space before logout button */
+}
+
+.navbar-button {
+  /* Inherits global button styles, add specifics */
+  padding: 0.4em 0.8em; /* Smaller padding for navbar button */
+  font-size: 0.9em;
+  margin-left: 0.5rem;
+}
+
+.logout-button {
+    background-color: #dc3545; /* Red for logout */
+    border-color: #dc3545;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* --- Form Styles --- */
+
+/* Container for Auth pages (Login/Register) */
+.auth-page {
+    max-width: 450px; /* Limit width */
+    margin: 40px auto; /* Center horizontally, add vertical margin */
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff; /* White background for the form card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.auth-page h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* General Form Styling (applies to auth and note forms) */
+.form {
+    /* Styles specific to the form tag itself, if any */
+}
+
+.note-form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 2rem; /* Space below the note form */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.note-form h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+/* Grouping for Label + Input */
+.form-group {
+    margin-bottom: 1rem; /* Space between form groups */
+}
+
+.form-group label {
+    display: block; /* Label on its own line */
+    margin-bottom: 0.5rem; /* Space between label and input */
+    font-weight: 500;
+    color: #555;
+}
+
+/* Input fields and Textareas */
+.form-input {
+    display: block; /* Take full width */
+    width: 100%; 
+    padding: 0.8rem 1rem; /* Comfortable padding */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da; /* Standard input border */
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input:focus {
+    border-color: #80bdff; /* Highlight on focus */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-input {
+    min-height: 80px; /* Ensure textarea has some height */
+    resize: vertical; /* Allow vertical resize */
+}
+
+/* Error Messages */
+.error-message {
+    color: #dc3545; /* Red for errors */
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c6cb;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Buttons within forms */
+.form .button { /* More specific selector */
+    width: 100%; /* Make form buttons take full width */
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    margin-top: 0.5rem; /* Add some space above the button */
+}
+
+/* Specific Button Colors (using classes) */
+.button-primary { /* Login/Register */
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.button-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.button-success { /* Create Note */
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.button-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Link to switch between Login/Register */
+.auth-switch-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.auth-switch-link a {
+    font-weight: 500;
+    color: #007bff;
+}
+
+/* --- Notes List/Item Styles --- */
+
+.notes-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin-top: 1.5rem; /* Add space above the list */
+}
+
+.notes-empty-message {
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.note-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1rem 1.5rem; /* More horizontal padding */
+    margin-bottom: 1rem; /* Space between notes */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Push content and actions apart */
+    align-items: flex-start; /* Align items to the top */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s ease;
+}
+
+.note-item:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08); /* Subtle shadow increase on hover */
+}
+
+
+.note-item-content {
+    flex-grow: 1; /* Allow content to take available space */
+    margin-right: 1rem; /* Space between content and actions */
+}
+
+.note-item-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.note-item-content p {
+    margin-bottom: 0.75rem;
+    color: #555;
+    white-space: pre-wrap; /* Preserve line breaks in content */
+    word-wrap: break-word; /* Break long words */
+}
+
+.note-item-meta {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.note-item-meta small {
+    display: block; /* Each timestamp on its own line */
+    margin-bottom: 0.3rem;
+}
+
+
+.note-item-actions {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-end; /* Align buttons to the right */
+    gap: 0.5rem; /* Space between buttons */
+    flex-shrink: 0; /* Prevent actions container from shrinking */
+}
+
+/* Specific Button Colors/Sizes (using classes) */
+.button-warning { /* Edit */
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529; /* Darker text for better contrast on yellow */
+}
+.button-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.button-danger { /* Delete */
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.button-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.button-small {
+    padding: 0.3rem 0.6rem; /* Smaller padding */
+    font-size: 0.85em; /* Smaller font size */
+}
+
+
+/* --- Dashboard Page Layout --- */
+
+.dashboard-page {
+    /* Uses .container styles from index.css for max-width, padding, margin */
+}
+
+.dashboard-page h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.dashboard-content {
+    /* Styles for the area containing form and notes list */
+    /* Example using Flexbox for a two-column layout (optional) */
+    /* display: flex;
+    gap: 2rem; */
+}
+
+.dashboard-content > .note-form {
+    /* If using flexbox, define flex properties */
+    /* flex: 1; */ /* Example: Form takes up 1 part */
+}
+
+.notes-section {
+     /* If using flexbox, define flex properties */
+    /* flex: 2; */ /* Example: List takes up 2 parts */
+    margin-top: 2rem; /* Add space between form and list if stacked */
+}
+
+.notes-section h3 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee; /* Separator line */
+    padding-bottom: 0.5rem;
+    color: #444;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    color: #555;
+}
